@@ -1,0 +1,9 @@
+<h1>List of available Polls</h1>
+
+<table>
+    <%= render(:partial => "poll_summary", :collection => @polls)%>
+</table>
+
+<div>
+<%= link_to 'Create new Poll', { :action => "new_poll"} %>
+</div>

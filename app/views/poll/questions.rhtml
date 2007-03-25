@@ -1,0 +1,24 @@
+<b><%= @poll.created_at.to_date.to_s(:long) %></b>
+<pre>
+<%= h @poll.description %>
+</pre>
+<p>
+Please answer <%= pluralize(@poll.questions.size, "question") %> in this poll!
+</p>
+
+<%= link_to 'back', { :action => "index"} %>
+
+<table>
+    <tr>
+        <th>Question</th>
+        <th>Votes</th>
+        <th>Rating</th>
+        <th></th>
+    </tr>
+    <div id="table">
+    <%= render(:partial => "question", :collection => @poll.questions)%>
+    </div>
+</table>
+
+<%= link_to 'back', { :action => "index"} %>
+    

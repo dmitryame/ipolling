@@ -1,0 +1,16 @@
+dominos_pizza_dev_lunch:
+  id:          1
+  description: Today we are going to order pizza for dev lunch from Dominos, cast your votes -- 3 top winners will be ordered!
+  created_at:  20061010103212
+  
+acetuna_dev_lunch:
+  id:          2
+  description: Today we are going to from Acetuna for dev lunch, cast your votes -- 3 top winners will be ordered!
+  created_at:  20061017110459
+  
+  
+macdonalds_dev_lunch:
+  id:          3
+  description: Today we are going to order from MacDonalds for dev lunch, cast your votes -- 3 top winners will be ordered!
+  created_at:  20061024090915
+  

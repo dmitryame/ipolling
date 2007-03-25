@@ -1,0 +1,48 @@
+dominos_cheese:
+  id:          1
+  description: Plain Cheese Pizza
+  poll_id:     1
+  
+dominos_peperoni:
+  id:          2
+  description: Peperoni Pizza
+  poll_id:     1
+  
+dominos_mushroom:
+  id:          3
+  description: Mushroom Pizza
+  poll_id:     1
+  
+acetuna_felafel_wrap:
+  id:          4
+  description: Felafel Wrap
+  poll_id:     2
+  
+acetuna_felafel_plate:
+  id:          5
+  description: Felafel Plate
+  poll_id:     2
+  
+mcdonalds_number_1:
+  id:          6
+  description: combo number 1
+  poll_id:     3
+  
+mcdonalds_number_2:
+  id:          7
+  description: combo number 2
+  poll_id:     3
+
+mcdonalds_number_3:
+  id:          8
+  description: combo number 3
+  poll_id:     3
+  
+mcdonalds_number_9:
+  id:          9
+  description: combo number 9
+  poll_id:     3
+  
+
+
+  

@@ -1,0 +1,7 @@
+<%= @random_string %>
+<% form_tag do %>
+    <%= text_field_tag(:input_word, "", :size=>8, :maxlength=>8)%>
+    <%= hidden_field_tag(:random_string, @random_string)%>
+    
+    <%= submit_tag "login"%>
+<% end %>

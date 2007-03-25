@@ -1,0 +1,14 @@
+<%= link_to 'back', { :action => "index"} %>
+
+<div classs="iPoll-form">
+    <%= error_messages_for 'poll' %>
+    <fieldset>
+        <legend>Enter new Poll Details:</legend>
+        <% form_for :poll do |form| %>
+            <p>
+                <%= form.text_area :description, "cols" => 40, "rows" => 8 %>
+            </p>
+            <%= submit_tag "Create Poll", :class => "submit"%>
+        <% end %>
+    </fieldset>
+</div>

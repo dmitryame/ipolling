@@ -1,0 +1,6 @@
+<tr class="<%= cycle("even", "odd") %>">
+    <td><%= link_to poll_summary.created_at.to_date.to_s(:long), { :action => "questions", :id => poll_summary } %></td>
+    <td><%= h(poll_summary.description) %></td>
+    <td><%= button_to "Clone", { :action => 'clone_poll', :id => poll_summary }, :confirm => "Are you sure you want to clone the poll?", :method => :post %></td>
+    <td><%= button_to "Delete", { :action => 'delete_poll', :id => poll_summary }, :confirm => "Are you sure you want to delete the poll?", :method => :delete %></td>
+</tr>

@@ -1,0 +1,17 @@
+<tr class="<%= cycle("even", "odd") %>">
+    <td><%= h(question.description) %></td>
+    <td id="vote.question.<%=question.id-%>"><%= question.votes.size%></td>
+    <td id="rating.question.<%=question.id-%>"><%= question.rating %></td>
+    <td id="buttons.question.<%=question.id-%>" > 
+        <% unless (session[:votes] ||= Hash.new).has_key?(question.id) %>
+            <% form_tag  do %>
+            <!--remote_action-->
+                <%= submit_to_remote 'rate_question', "unacceptable",  :url => {:action => :rate_question, :id => question , :value => 0} %>            
+                <%= submit_to_remote 'rate_question', "non-satisfactory",  :url => {:action => :rate_question, :id => question , :value => 24} %>            
+                <%= submit_to_remote 'rate_question', "neutral",  :url => {:action => :rate_question, :id => question , :value => 49} %>            
+                <%= submit_to_remote 'rate_question', "satisfactory",  :url => {:action => :rate_question, :id => question , :value => 74} %>            
+                <%= submit_to_remote 'rate_question', "outstanding",  :url => {:action => :rate_question, :id => question , :value => 99} %>            
+            <% end %>
+        <% end %>
+    </td>
+</tr>

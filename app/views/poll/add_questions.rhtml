@@ -1,0 +1,25 @@
+<%= link_to 'back', { :action => "index"} %>
+
+<div classs="iPoll-form">
+
+<%= error_messages_for 'question' %>
+    <fieldset>
+        <legend>The Poll:</legend>
+        <p><%= h @poll.description %></p>
+    </fieldset>
+    <fieldset>
+        <legend>Add new Question to the Poll:</legend>
+        <% form_for :question, @question, :url => { :action => "add_questions"}  do |form| %>
+            <p>
+                <%= form.text_area :description, "cols" => 40, "rows" => 8 %>
+            </p>
+            <%= submit_tag "Add Question", :class => "submit" %>
+        <% end %>
+    </fieldset>
+
+ <%= pluralize(@poll.questions.size, "question") %> in this Poll
+ 
+    <table>
+        <%= render(:partial => "question", :collection => @poll.questions) %>
+    </table>
+</div>
