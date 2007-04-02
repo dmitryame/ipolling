@@ -44,4 +44,6 @@ production:
   host: localhost
 # added explicit encoding
   encoding: utf8
+# this line had to be added manually on ubuntu to work 
+  socket: /var/run/mysqld/mysqld.sock
   
