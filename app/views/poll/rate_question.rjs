@@ -1,6 +1,6 @@
 page.replace_html "vote.question.#{@question.id}", "#{@question.votes.size}"
 page.replace_html "rating.question.#{@question.id}", "#{@question.rating}"
-page.replace_html "buttons.question.#{@question.id}", "voted!"
+page.replace_html "buttons.question.#{@question.id}",  "...VOTED..."
 
 page["vote.question.#{@question.id}"].visual_effect :highlight, :startcolor => "#114411", :endcolor => "#88ff88"
 page["rating.question.#{@question.id}"].visual_effect :highlight, :startcolor => "#114411", :endcolor => "#ffff88"

@@ -3,15 +3,31 @@
     <td id="vote.question.<%=question.id-%>"><%= question.votes.size%></td>
     <td id="rating.question.<%=question.id-%>"><%= question.rating %></td>
     <td id="buttons.question.<%=question.id-%>" > 
-        <% unless (session[:votes] ||= Hash.new).has_key?(question.id) %>
-            <% form_tag  do %>
-            <!--remote_action-->
-                <%= submit_to_remote 'rate_question', "unacceptable",  :url => {:action => :rate_question, :id => question , :value => 0} %>            
-                <%= submit_to_remote 'rate_question', "non-satisfactory",  :url => {:action => :rate_question, :id => question , :value => 24} %>            
-                <%= submit_to_remote 'rate_question', "neutral",  :url => {:action => :rate_question, :id => question , :value => 49} %>            
-                <%= submit_to_remote 'rate_question', "satisfactory",  :url => {:action => :rate_question, :id => question , :value => 74} %>            
-                <%= submit_to_remote 'rate_question', "outstanding",  :url => {:action => :rate_question, :id => question , :value => 99} %>            
-            <% end %>
-        <% end %>
+        <table cellpadding=0 cellspacing=0>
+            <tr>
+                <% for i in [0,10,20,30,40,50,60,70,80,90,100] %>
+                <td>
+                 <% if (session[:votes] ||= Hash.new).has_key?(question.id)%>
+                         <%  if (i < question.rating.to_i ) %>
+                            <%= image_tag("/images/on.png") %>
+                         <% else %>
+                            <%= image_tag("/images/off.png") %>
+                         <% end %>
+                
+                 <% else %>
+                     <% form_remote_tag :url => {:action => :rate_question, :id => question , :value => i} do -%>
+                         <%  if (i < question.rating.to_i ) %>
+                            <%= image_submit_tag("/images/on.png" )  %>
+                         <% else %>
+                            <%= image_submit_tag("/images/off.png" ) %>              
+                         <% end %>
+                      <% end -%>
+                 <% end %>   
+                 </td>
+                <% end -%>
+                            
+            </tr>
+        </table>
+         
     </td>
 </tr>
