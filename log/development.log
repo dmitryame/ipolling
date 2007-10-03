@@ -16231,3 +16231,191 @@ Rendered poll/_poll_summary (0.00666)
 Rendered poll/_poll_summary (0.00134)
 Rendered poll/_poll_summary (0.00123)
 Completed in 0.01711 (58 reqs/sec) | Rendering: 0.00880 (51%) | DB: 0.00277 (16%) | 200 OK [http://localhost/]
+
+
+Processing PollController#questions (for 127.0.0.1 at 2007-10-03 11:00:51) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"questions", "id"=>"3", "controller"=>"poll"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00111 (901 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/poll/questions/3]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2007-10-03 11:00:51) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering login/login
+Completed in 0.00245 (407 reqs/sec) | Rendering: 0.00165 (67%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing PollController#index (for 127.0.0.1 at 2007-10-03 11:08:10) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"index", "controller"=>"poll"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00106 (947 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2007-10-03 11:08:10) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering login/login
+Completed in 0.00225 (444 reqs/sec) | Rendering: 0.00147 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing PollController#index (for 127.0.0.1 at 2007-10-03 11:08:17) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"index", "controller"=>"poll"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00095 (1049 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/]
+
+
+Processing PollController#index (for 127.0.0.1 at 2007-10-03 11:08:18) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"index", "controller"=>"poll"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00092 (1085 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/]
+
+
+Processing PollController#index (for 127.0.0.1 at 2007-10-03 11:08:19) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"index", "controller"=>"poll"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00110 (908 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/]
+
+
+Processing PollController#questions (for 127.0.0.1 at 2007-10-03 11:08:32) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"questions", "id"=>"3", "controller"=>"poll"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00096 (1037 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/poll/questions/3]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2007-10-03 11:08:32) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering login/login
+Completed in 0.00242 (413 reqs/sec) | Rendering: 0.00159 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2007-10-03 11:08:39) [POST]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"commit"=>"login", "captcha"=>"xmava", "action"=>"login", "controller"=>"login"}
+Redirected to http://localhost:3000/poll/questions/3
+Completed in 0.34531 (2 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/login/login]
+
+
+Processing PollController#questions (for 127.0.0.1 at 2007-10-03 11:08:39) [GET]
+  Session ID: 7dff12f4d47dc8a41c6a247ef8c7a124
+  Parameters: {"action"=>"questions", "id"=>"3", "controller"=>"poll"}
+  [4;36;1mPoll Columns (0.001752)[0m   [0;1mSHOW FIELDS FROM polls[0m
+  [4;35;1mPoll Load (0.001334)[0m   [0mSELECT * FROM polls WHERE (polls.`id` = 3) [0m
+Rendering  within layouts/poll
+Rendering poll/questions
+  [4;36;1mQuestion Columns (0.002961)[0m   [0;1mSHOW FIELDS FROM questions[0m
+  [4;35;1mSQL (0.000911)[0m   [0mSELECT count(*) AS count_all FROM questions WHERE (questions.poll_id = 3) [0m
+  [4;36;1mQuestion Load (0.000258)[0m   [0;1mSELECT * FROM questions WHERE (questions.poll_id = 3) [0m
+  [4;35;1mVote Columns (0.001749)[0m   [0mSHOW FIELDS FROM votes[0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000173)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000184)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000187)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000169)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000178)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000172)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000173)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000206)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000172)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000179)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000172)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000405)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000213)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 6) [0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 6) [0m
+Rendered poll/_question (0.02843)
+  [4;35;1mSQL (0.000180)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000155)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000179)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000172)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000177)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000171)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000185)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000172)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000173)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000175)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000360)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000233)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000196)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000179)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 7) [0m
+  [4;35;1mSQL (0.000182)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 7) [0m
+Rendered poll/_question (0.08267)
+  [4;36;1mSQL (0.000215)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000176)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000187)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000175)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000186)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000181)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000198)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000181)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000179)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000176)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000189)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+  [4;35;1mSQL (0.000195)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 8) [0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 8) [0m
+Rendered poll/_question (0.02122)
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000182)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000201)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000193)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000256)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000200)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000204)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000195)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000176)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000188)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
+Rendered poll/_question (0.02235)
+Completed in 0.18025 (5 reqs/sec) | Rendering: 0.14598 (80%) | DB: 0.02834 (15%) | 200 OK [http://localhost/poll/questions/3]

@@ -12,7 +12,8 @@ class LoginController < ApplicationController
         flash[:notice] = "Try Again";
       else
         session[:user_id] = answer
-        redirect_to :controller => 'poll', :action => 'index'
+        session[:return_to] ? redirect_to_url(session[:return_to]) : redirect_to(default)
+        session[:redirect_to] = nil
       end
     end
 
