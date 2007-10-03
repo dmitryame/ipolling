@@ -16184,3 +16184,50 @@ Rendering poll/rate_question
   [4;36;1mSQL (0.000215)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.question_id = 9) [0m
   [4;35;1mSQL (0.000251)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
 Completed in 0.03203 (31 reqs/sec) | Rendering: 0.00813 (25%) | DB: 0.00757 (23%) | 200 OK [http://localhost/poll/rate_question/9?value=60]
+
+
+Processing PollController#index (for 127.0.0.1 at 2007-10-03 10:53:06) [GET]
+  Session ID: 744ec1a8bf2dd0480800c64815a8d3c0
+  Parameters: {"action"=>"index", "controller"=>"poll"}
+  [4;36;1mPoll Load (0.000357)[0m   [0;1mSELECT * FROM polls ORDER BY created_at DESC[0m
+Rendering  within layouts/poll
+Rendering poll/index
+  [4;35;1mPoll Columns (0.002280)[0m   [0mSHOW FIELDS FROM polls[0m
+Rendered poll/_poll_summary (0.00497)
+Rendered poll/_poll_summary (0.00101)
+Rendered poll/_poll_summary (0.00096)
+Completed in 0.01492 (67 reqs/sec) | Rendering: 0.00640 (42%) | DB: 0.00264 (17%) | 200 OK [http://localhost/]
+
+
+Processing PollController#index (for 127.0.0.1 at 2007-10-03 10:53:23) [GET]
+  Session ID: 463abc215b20edb26b340a99a04c27a2
+  Parameters: {"action"=>"index", "controller"=>"poll"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00099 (1008 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2007-10-03 10:53:23) [GET]
+  Session ID: 463abc215b20edb26b340a99a04c27a2
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering login/login
+Completed in 0.00338 (295 reqs/sec) | Rendering: 0.00234 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2007-10-03 10:53:32) [POST]
+  Session ID: 463abc215b20edb26b340a99a04c27a2
+  Parameters: {"commit"=>"login", "captcha"=>"vvozm", "action"=>"login", "controller"=>"login"}
+Redirected to http://localhost:3000/
+Completed in 0.34476 (2 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/login/login]
+
+
+Processing PollController#index (for 127.0.0.1 at 2007-10-03 10:53:33) [GET]
+  Session ID: 463abc215b20edb26b340a99a04c27a2
+  Parameters: {"action"=>"index", "controller"=>"poll"}
+  [4;36;1mPoll Load (0.000328)[0m   [0;1mSELECT * FROM polls ORDER BY created_at DESC[0m
+Rendering  within layouts/poll
+Rendering poll/index
+  [4;35;1mPoll Columns (0.002442)[0m   [0mSHOW FIELDS FROM polls[0m
+Rendered poll/_poll_summary (0.00666)
+Rendered poll/_poll_summary (0.00134)
+Rendered poll/_poll_summary (0.00123)
+Completed in 0.01711 (58 reqs/sec) | Rendering: 0.00880 (51%) | DB: 0.00277 (16%) | 200 OK [http://localhost/]
