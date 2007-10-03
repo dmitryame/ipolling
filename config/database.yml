@@ -15,10 +15,10 @@ development:
   adapter: mysql
   database: iPolling_development
   username: root
-  password: root
+  password: 
   host: localhost
 # this line had to be added manually on ubuntu to work 
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
 # added explicit encoding
   encoding: utf8
 # Warning: The database defined as 'test' will be erased and
@@ -28,10 +28,10 @@ test:
   adapter: mysql
   database: iPolling_test
   username: root
-  password: root
+  password: 
   host: localhost
 # this line had to be added manually on ubuntu to work 
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
 # added explicit encoding
   encoding: utf8
   

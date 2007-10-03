@@ -14,7 +14,12 @@ pre {
 
 a { color: #000; }
 a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+#a:hover { color: #fff; background-color:#000; }
+
+label {
+    font-size: 8px;
+    font-weight: bold;    
+}
 
 .fieldWithErrors {
   padding: 2px;
@@ -78,6 +83,10 @@ div.banner {
 div.footer {
      font-size: 8px;
      text-align: right;
+}
+
+li.list_item {
+    border: 1px dotted grey;
 }
 
 tr.even td{

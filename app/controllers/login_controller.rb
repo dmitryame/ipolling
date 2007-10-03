@@ -1,27 +1,27 @@
+require 'open-uri'
+
 class LoginController < ApplicationController
   
   def login
     if request.post?
-      random_string = params[:random_string]
-      input_word = params[:input_word]
-      if random_string.reverse + "124" == input_word
-        session[:user_id] = random_string
+      answer = params[:captcha]
+      answer  = answer.gsub(/\W/, '')
+      
+      if open("http://captchator.com/captcha/check_answer/pizza#{session.session_id}/#{answer}").read.to_i == 0
+          session[:user_id] = nil
+        flash[:notice] = "Try Again";
+      else
+        session[:user_id] = answer
         redirect_to :controller => 'poll', :action => 'index'
       end
-    end 
-    @random_string = random_string 5
+    end
+
   end
     
   
   
   private 
   
-   def random_string(len)
-    chars = ('a'..'z').to_a - ['a','e','i','o','u']
-    code_array=[]
-    1.upto(len) {code_array << chars[rand(chars.length)]}
-    return code_array
-  end
   
 end
  

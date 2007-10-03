@@ -1,7 +1,13 @@
-<%= @random_string %>
 <% form_tag do %>
-    <%= text_field_tag(:input_word, "", :size=>8, :maxlength=>8)%>
-    <%= hidden_field_tag(:random_string, @random_string)%>
-    
+	<table>
+		<tr>
+			<td>
+				<img src="http://captchator.com/captcha/image/pizza<%=session.session_id%>" />
+			</td>
+			<td>
+				<%= text_field_tag :captcha %>
+			</td>
+		</tr>
+	</table>
     <%= submit_tag "login"%>
 <% end %>
