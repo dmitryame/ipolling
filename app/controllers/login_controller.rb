@@ -4,7 +4,6 @@ class LoginController < ApplicationController
   
   def login
     if request.post?
-          user = User.authenticate(params[:login], params[:password])
           answer = params[:captcha]
           answer  = answer.gsub(/\W/, '')
           openUrl = open("http://captchator.com/captcha/check_answer/ipoll_#{params[:session_id].to_i}/#{answer}").read.to_i
