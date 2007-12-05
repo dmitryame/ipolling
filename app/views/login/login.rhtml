@@ -2,7 +2,9 @@
 	<table>
 		<tr>
 			<td>
-				<img src="http://captchator.com/captcha/image/pizza<%=session.session_id%>" />
+				 <% session_id = rand(10_000) %>
+				  <img src="http://captchator.com/captcha/image/ipoll_<%= session_id -%>" />
+				  <input name="session_id" type="hidden" value="<%= session_id -%>" />
 			</td>
 			<td>
 				<%= text_field_tag :captcha %>

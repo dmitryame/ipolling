@@ -4,10 +4,12 @@ class LoginController < ApplicationController
   
   def login
     if request.post?
-      answer = params[:captcha]
-      answer  = answer.gsub(/\W/, '')
+          user = User.authenticate(params[:login], params[:password])
+          answer = params[:captcha]
+          answer  = answer.gsub(/\W/, '')
+          openUrl = open("http://captchator.com/captcha/check_answer/ipoll_#{params[:session_id].to_i}/#{answer}").read.to_i
       
-      if open("http://captchator.com/captcha/check_answer/pizza#{session.session_id}/#{answer}").read.to_i == 0
+      if openUrl == 0
           session[:user_id] = nil
         flash[:notice] = "Try Again";
       else
