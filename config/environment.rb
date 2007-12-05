@@ -42,6 +42,15 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
   
   # See Rails::Configuration for more options
+# Your secret key for verifying cookie-based 
+# session data integrity. 
+# If you change this key, all existing sessions 
+# will become invalid! 
+config.action_controller.session = { 
+   :session_key => '_myapp_session', 
+   :secret      => '_ipolling_secretkey' 
+}
+
 end
 
 # Add new inflection rules using the following format 
@@ -57,12 +66,4 @@ end
 # Mime::Type.register "text/richtext", :rtf
 # Mime::Type.register "application/x-mobile", :mobile
 
-# Your secret key for verifying cookie-based 
-# session data integrity. 
-# If you change this key, all existing sessions 
-# will become invalid! 
-config.action_controller.session = { 
-   :session_key => '_myapp_session', 
-   :secret      => '_ipolling_secretkey' 
-}
 # Include your application configuration below
