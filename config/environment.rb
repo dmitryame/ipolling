@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-#RAILS_GEM_VERSION = '1.2.2' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.0.1' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -42,15 +42,15 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
   
   # See Rails::Configuration for more options
-# Your secret key for verifying cookie-based 
-# session data integrity. 
-# If you change this key, all existing sessions 
-# will become invalid! 
-config.action_controller.session = { 
-   :session_key => '_myapp_session', 
-   :secret      => '_ipolling_secretkey' 
-}
-
+  # Your secret key for verifying cookie-based 
+  # session data integrity. 
+  # If you change this key, all existing sessions 
+  # will become invalid! 
+  config.action_controller.session = { 
+     :session_key => '_myapp_ipolling-session', 
+     :secret      => 'kjskdjfhsdkfhwheirhi32u4hiu3hiuhihuiudhfiuh34iuh5i3u4h5iuhiuhieurhtiuhiuh' 
+  } 
+  
 end
 
 # Add new inflection rules using the following format 
@@ -65,5 +65,8 @@ end
 # Add new mime types for use in respond_to blocks:
 # Mime::Type.register "text/richtext", :rtf
 # Mime::Type.register "application/x-mobile", :mobile
+$KCODE = 'u'
+
+
 
 # Include your application configuration below
