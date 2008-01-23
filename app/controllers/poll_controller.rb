@@ -14,7 +14,7 @@ class PollController < ApplicationController
       poll = Poll.find(params[:id])
       new_poll = Poll.new
       new_poll.description = poll.description
-      new_poll.create
+      new_poll.save
       #to test transactions uncomment next line
       #raise "test rollback"
       poll.questions.each do |question|
