@@ -21,7 +21,7 @@ class PollController < ApplicationController
         new_question = Question.new
         new_question.description = question.description
         new_question.poll = new_poll
-        new_question.create
+        new_question.save
       end
     end #transaction
     flash[:notice] = 'Poll was successfully cloned!'
