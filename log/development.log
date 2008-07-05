@@ -16419,3 +16419,4 @@ Rendered poll/_question (0.02122)
   [4;35;1mSQL (0.000185)[0m   [0mSELECT avg(rate) AS avg_rate FROM votes WHERE (votes.question_id = 9) [0m
 Rendered poll/_question (0.02235)
 Completed in 0.18025 (5 reqs/sec) | Rendering: 0.14598 (80%) | DB: 0.02834 (15%) | 200 OK [http://localhost/poll/questions/3]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
