@@ -16,12 +16,8 @@
                 
                  <% else %>
                      <% form_remote_tag :url => {:action => :rate_question, :id => question , :value => i} do -%>
-                         <%  if (i < question.rating.to_i ) %>
-                            <%= image_submit_tag("/images/on.png" )  %>
-                         <% else %>
-                            <%= image_submit_tag("/images/off.png" ) %>              
-                         <% end %>
-                      <% end -%>
+                         <%= image_submit_tag("/images/off.png" ) %>                         
+                     <% end -%>
                  <% end %>   
                  </td>
                 <% end -%>
