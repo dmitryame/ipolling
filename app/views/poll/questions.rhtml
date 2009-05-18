@@ -2,23 +2,36 @@
 <pre>
 <%= h @poll.description %>
 </pre>
-<p>
-Please answer <%= pluralize(@poll.questions.size, "question") %> in this poll!
-</p>
 
 <%= link_to 'back', { :action => "index"} %>
 
+<p><b>
+<% if (session[:votes] ||= Hash.new).has_key?(@poll.questions[0].id)%>
+	
+Results:
+
+<% else %>
+	
+Please rate the following:
+
+<%end %>
+</b></p>
+
 <table>
-    <tr>
-        <th>Question</th>
-        <th>Votes</th>
-        <th>Rating</th>
-        <th></th>
-    </tr>
     <div id="table">
     <%= render(:partial => "question", :collection => @poll.questions)%>
     </div>
 </table>
+<% if (session[:votes] ||= Hash.new).has_key?(@poll.questions[0].id)%>
+<%	max=0
+	for i in 0..@poll.questions.size-1
+		if @poll.questions[i].votes.size > max
+			max = @poll.questions[i].votes.size
+		end
+	end
+%>
+	<p>Total number of voters: <b><%=max%></b></p>
+<%end%>
 
 <%= link_to 'back', { :action => "index"} %>
     
