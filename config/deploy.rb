@@ -26,12 +26,25 @@ set :scm, "git"
 # set :scm_passphrase, "p@ssw0rd" #This is your custom users password
 set :user, "deployer"
 
-role :app, "echowaves.com"
-role :web, "echowaves.com"
-role :db,  "echowaves.com", :primary => true
+role :app, "ipolling.com"
+role :web, "ipolling.com"
+role :db,  "ipolling.com", :primary => true
 
 
 namespace :deploy do
+  task :start, :roles => :app do
+    run "touch #{current_release}/tmp/restart.txt"
+  end
+
+  task :stop, :roles => :app do
+    # Do nothing.
+  end
+
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_release}/tmp/restart.txt"
+  end
+  
   
   task :copy_prod_configuration do
     run "cp /u/config/#{application}/database.yml #{release_path}/config/"
